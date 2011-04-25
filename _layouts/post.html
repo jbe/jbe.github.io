@@ -1,0 +1,15 @@
+---
+layout: content
+---
+
+<div class="post">
+  <h2>{{ page.title }}</h2>
+  <div class="post-meta">
+    <time class="pill" datetime="{{ page.date | date: '%Y-%m-%d' }}">{{ page.date | date: "%B %d, %Y" }}</time>
+  </div>
+
+  <div class="body">
+    {{ content }}
+  </div>
+  
+</div>
