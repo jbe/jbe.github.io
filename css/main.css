@@ -63,6 +63,9 @@ h2 {
   border-top: 1px dashed #cccccc;
   padding-top: 2em; }
 
+pre {
+  font-family: Menlo, Monaco, "DejaVu Sans Mono", Consolas, "Lucida Console", monospace; }
+
 .highlight {
   box-shadow: 0px 1px 3px #666666;
   background-color: white;
