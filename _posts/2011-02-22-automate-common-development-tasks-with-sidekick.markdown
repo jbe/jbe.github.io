@@ -5,10 +5,10 @@ published: true
 categories: ["Ruby", "Hacking"]
 ---
 
-When programming, it is sometimes useful to automatically perform tasks on certain events, such as when a file is saved. For instance, while working on a web page, you might want to
+When programming, it can be useful to automatically perform tasks on certain events. For instance, while working on a web page, you might want to
 
-- recompile templates each time they are edited
-- restart dev servers each time you make changes
+- recompile templates when they are edited
+- restart dev servers when code changes
 - continuously run tests, notifying via growl or libnotify
 - get a reminder to take a break each hour
 
@@ -26,6 +26,6 @@ $ gem install sidekick
 $ sidekick
 {% endhighlight %}
 
-It is still beta, but i use it myself, without too much trouble. Not tested outside Linux.
+It is still beta, but i use it myself without trouble. Not tested outside Linux.
 
 Bug reports, ideas, forks and pull requests are welcome. [Sourcecode on Github](https://github.com/jbe/sidekick).

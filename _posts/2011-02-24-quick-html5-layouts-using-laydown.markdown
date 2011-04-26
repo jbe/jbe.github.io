@@ -5,9 +5,9 @@ published: true
 categories: ["Ruby", "Hacking"]
 ---
 
-Most of the web apps i write have more or less the same base layout. I almost never include any body structure except possibly a wrapper. In other words, the only thing that changes from app to app are the title, icon, stylesheets, keywords, description, an esoteric head tag for some exotic purpose and so on — some of them depending on the request. It might be handy to just specify this using pure Ruby.
+Most of the web apps i write more or less share the same base layout. I hardly ever include body code, except possibly a wrapper. In other words, the only thing that changes from app to app are the title, icon, stylesheets, keywords, description, an esoteric head tag for some exotic purpose and so on — some of them depending on the request. So why not specify this using pure Ruby?
 
-I wrote Laydown [Laydown](https://github.com/jbe/laydown) so that i can use pure Ruby to make simple boilerplate layout templates.
+Laydown [Laydown](https://github.com/jbe/laydown) provides instant simple boilerplate layout templates:
 
 {% highlight ruby %}
 require 'laydown'
@@ -37,6 +37,8 @@ layout.render(self, :msg => 'hello') { '<p>body text</p>' }
 # => your html5 layout
 
 {% endhighlight %}
+
+Note how symbols are converted to variable or method invocations, and string interpolations are applied when rendering.
 
 As a bonus, laydown is faster than most template languages, and easy to integrate, thanks to [Temple](http://timeless.judofyr.net/temple) and [Tilt](https://github.com/rtomayko/tilt). [The source is on Github](https://github.com/jbe/laydown).
 

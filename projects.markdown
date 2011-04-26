@@ -3,10 +3,9 @@ layout: content
 title: Projects
 ---
 
-[**Random fact**](http://random-fact.heroku.com/)
-for people who like fun facts.
+[Random facts](http://random-fact.heroku.com/)
+provides endless fun facts.
 
-[**Tao Te Ching**](/tao-te-ching.html)
-for the spiritually inclined.
+[Tao Te Ching translations](/tao-te-ching.html)
+for comparing side by side.
 
-**Diary app** coming someday, maybe.

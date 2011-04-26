@@ -53,17 +53,25 @@ h2, h3, h4 {
 #content {
   margin-top: 1.5em;
   border-top: 1px dashed #cccccc;
-  padding-top: 1.5em; }
+  padding-top: 2em; }
 
 .highlight {
   padding: 0.1em 1em;
   margin-bottom: 2em;
   box-shadow: 0px 1px 3px #666666; }
 
-code {
+p code {
   border: 1px solid #bbbbbb;
   background: white;
   padding: 0 0.2em; }
+
+.post .title {
+  margin-bottom: 0; }
+.post a {
+  text-decoration: none; }
+.post .timestamp {
+  color: gray;
+  font-size: 0.8em; }
 
 #bg-fade {
   position: fixed;
