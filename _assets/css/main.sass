@@ -77,7 +77,10 @@ h1, h2, h3, h3, h4, #header p
     &:hover
       :text-decoration underline
 
-h2, h3, h4
+h3, h4
+  :font-size 1em
+
+h2
   :font-size 2em
   :font-weight 400
   :font-family "Covered By Your Grace", $default-sans
@@ -92,9 +95,10 @@ h2, h3, h4
   :padding-top 2em
 
 .highlight
+  +lighter-box-shadow
+  :background-color white
   :padding 0.1em 1em
   :margin-bottom 2em
-  +lighter-box-shadow
 
 p code
   :border 1px solid #bbb

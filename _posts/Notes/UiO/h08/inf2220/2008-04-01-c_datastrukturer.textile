@@ -1,0 +1,55 @@
+---
+layout: post
+title: "C: Datastrukturer"
+published: true
+categories:
+  - Notes
+  - UiO
+  - inf1060
+  - C
+---
+
+Struct-er, lister, køer, stakker, osv.
+
+*Struct*
+
+<pre name="code" class="c:nocontrols">
+struct Person
+{
+   char *name;
+   int age;
+   enum { male, female } sex;
+} per, knut;
+  
+typedef struct {
+   int x, y;
+} point;
+
+struct Person p = {"Espen", 24};
+printf("Name: %s Age: %s\n", p.name, p.age);
+point p;
+c.x = 24;
+c.y = 24;
+
+(*StructPointer).varName // struct pointer syntax
+StructPointer->varName // er shorthand for dette
+</pre>
+
+*Datastrukturer*
+
+|_type_|_set/add_|_get/pop_|_ellers da?_|
+|vektor/matrise/array|@a[p] = v@|@v = a[p]@|&nbsp;|
+|stack/lifo|@s[++sp] = v@|@v = s[sp--]@|&nbsp;|
+|kø/fifo|&darr;|&darr;|ringbuffere brukes ofte her|
+|liste|?|?|kommer kanskje senere|
+
+*Ringbuffer* er populært i C:
+
+@int ring[BUFFSIZ], ring_in=0, ring_out=0, ring_n=0@
+
+Prosedyre:
+
+|Insetting:|sjekker om buffer er full, setter inn, oppdaterer indekser, nullstiller in-variabelen hvis vi har kommet rundt.|
+|Henting:|sjekker underflow, oppdaterer variable, ser til at out-variabelen ikke forlater ringen.|
+
+*Lister* kan bygges opp av stucter der hvert element har en neste-peker.

@@ -1,0 +1,50 @@
+---
+layout: post
+title: "C: IO"
+published: true
+categories:
+  - Notes
+  - UiO
+  - inf1060
+  - C
+---
+
+*Utskrift til stdout* gjøres f.eks med printf("Verdi: %d", 32). Første parameter tar disse escape-sekvensene:
+
+|_%%_|%|
+|_%d_|heltall|
+|_%u_|heltall unsigned|
+|_%x_|hex unsigned|
+|_%o_|octal unsigned|
+|_%f_|float unsigned|
+|_%c_|tegn|
+|_%s_|streng|
+
+Disse kan også hektes sammen med noen flere opsjoner, relatert til desimalformatering ol.
+
+*Filer* deklareres som @FILE *filpekernavn@. De åpnes med @filpekernavn = fopen(filnavn, "r")@, der "r" er et flagg som angir at filen skal leses. @fopen@ returnerer NULL hvis filen ikke eksisterer. For å skrive brukes flagget "w".
+
+Noen kjekke setninger:
+
+<pre name="code" class="c:nocontrols">
+fscanf(f, "%d%d", &a, &b)
+fprintf( tilsvarende )
+fclose(f)
+c = fgetc(f)
+while( c != EOF )
+</pre>
+
+
+fgets // lese linjer
+fread // lese data
+fwrite // skrive data
+fgetc
+fscanf
+
+
+*Strenger* finnes det forskjellige implementasjoner for. Det vanligste er en @"\0"@-terminert @char[]@:
+
+*IO*
+
+@fgets(bla bla bla)@ leser en linje fra fil.
+

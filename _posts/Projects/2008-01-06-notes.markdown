@@ -1,0 +1,10 @@
+---
+layout: post
+title: "Notes"
+site: "/notes.html"
+categories:
+  - Projects
+published: true
+---
+
+A collection of [notes; mostly study notes from the University of Oslo](/notes.html).

@@ -1,0 +1,34 @@
+---
+layout: post
+title: "C: Testing og debugging"
+published: true
+categories:
+  - Notes
+  - UiO
+  - inf1060
+---
+
+*Assert*
+
+<pre name="code" class="c:nocontrols">
+
+#define NDEBUG // skrur av assert
+
+assert(1 == 1);
+
+</pre>
+
+*Debuggere* kan f.eks:
+
+* Analysere en minnedump
+* Vise call-stack & variable
+* Kjøre linjevis
+* Bruke breakpoints
+
+|_Hvem anbefaler_|_hva_|
+|Dag|ddd|
+|Espeak|kdbg|
+|Sjappa på hjørnet|gdb|
+
+For å bruke denne kompilerer man med @-d@ opsjonen. Dette kan kreve litt resurser, og dermed kanskje endring av ulimits.
+
