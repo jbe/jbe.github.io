@@ -7,8 +7,8 @@ categories: ["Ruby", "Hacking"]
 
 When programming, it can be useful to automatically perform tasks on certain events. For instance, while working on a web page, you might want to
 
-- recompile templates when they are edited
-- restart dev servers when code changes
+- recompile templates when they are saved
+- restart development servers when code changes
 - continuously run tests, notifying via growl or libnotify
 - get a reminder to take a break each hour
 
@@ -28,4 +28,4 @@ $ sidekick
 
 It is still beta, but i use it myself without trouble. Not tested outside Linux.
 
-Bug reports, ideas, forks and pull requests are welcome. [Sourcecode on Github](https://github.com/jbe/sidekick).
+Bug reports, ideas, forks and pull requests are welcome. [Source code on Github](https://github.com/jbe/sidekick).

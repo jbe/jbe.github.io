@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Professional audio production on Ubuntu 10.10 Maverick"
+title: "Professional audio production in Ubuntu 10.10 Maverick"
 published: true
 categories: ["Ruby", "Hacking"]
 ---
@@ -17,6 +17,6 @@ Ubuntu Linux can be set up for decently professional audio production without to
 
 5. Open Ubuntu sound settings -> Output, and select “Jack sink”.
 
-From now on, whenever you need Jack, just repeat the last two steps. Use Patchage (or qjackctl) to route audio and MIDI, and Ardour to record and mix. Get some funky free plugins, and this setup is plenty for a lot of use cases. The Jack/Ardour combo is more or less the one and only professional Linux DAW these days imho.
+From now on, whenever you need Jack, just repeat the last two steps. Use Patchage (or JACK Control) to route audio and MIDI, and Ardour to record and mix. Get some funky free plugins, and this setup is plenty for a lot of use cases. The Jack/Ardour combo is more or less the one and only professional Linux DAW these days imho.
 
 [Source](http://ubuntuforums.org/showthread.php?t=1640172)
