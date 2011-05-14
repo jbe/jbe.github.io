@@ -7,7 +7,7 @@ categories:
   - Ruby
 ---
 
-I use [Tilt](https://github.com/rtomayko/tilt) a lot. One of the great things about it is how it makes it trival to support a lot of template languages. It also binds the compiled template inside a method in a neat way (also known as "method compilation"), resulting in speedy rendering. I use Tilt for many weird tasks of all kinds.
+I use [Tilt](https://github.com/rtomayko/tilt) a lot. One of the great things about it is how it makes it trival to support a lot of template languages. It also binds the compiled template inside a method in a neat way (known as "method compilation"), resulting in speedy rendering. I use Tilt for many weird tasks of all kinds.
 
 However, Tilt only knows about two-step compilation (eg. compile, render). That is hardly ever a problem, except when I want to do something fancy with the intermediate format (the compiled template), like saving it to disk and loading it later, or manipulating it in some way. Those cases exist too. Furthermore, Tilt supports one-step formats like [Sass](http://sass-lang.com/) and [CoffeeScript](http://jashkenas.github.com/coffee-script/), but in Tilt they compile in two steps.
 
@@ -27,6 +27,6 @@ Shift.read('cup.coffee').compile.minify.write
 
 {% endhighlight %}
 
-It does more, but this illustrates the basic idea. In the above example, the interfaces are determined automatically based on the format. Each format can have any number of different actions, so `.compile`, `.minify` and `.gzip` are by no means the only things you can do.
+It does more, but this illustrates the basic idea. In the above example, the interfaces are determined automatically based on the format. Each format can have any number of different actions, so `.compile`, `.minify` and `.gzip` are by no means the only things you can do. As we pass through the chain, the format changes, making sure the actions map to the right interfaces.
 
 I have not started writing interfaces for template languages like Haml, ERB and friends yet. We'll see where attention flows. Contributions and opinions are very welcome. Check out [the project on Github](https://github.com/jbe/shift).
