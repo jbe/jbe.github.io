@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Compile, compress, transform and chain anything using Ruby with the help of Shift"
+title: "Compile, compress, transform and chain anything using Shift and Ruby"
 published: true
 categories:
   - Hacking
