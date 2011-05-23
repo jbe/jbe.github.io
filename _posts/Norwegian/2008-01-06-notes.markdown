@@ -2,8 +2,6 @@
 layout: post
 title: "Notes"
 site: "/notes.html"
-categories:
-  - Projects
 published: true
 ---
 
