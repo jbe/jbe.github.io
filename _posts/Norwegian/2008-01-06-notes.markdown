@@ -3,6 +3,8 @@ layout: post
 title: "Notes"
 site: "/notes.html"
 published: true
+categories:
+  - Norwegian
 ---
 
 A collection of [notes; mostly study notes from the University of Oslo](/notes.html).
