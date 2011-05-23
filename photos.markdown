@@ -1,6 +1,6 @@
 ---
 layout: content
-title: Projects
+title: Photos
 ---
 
 &rarr; [Photosets on flickr](/images/29.media.tumblr.com/tumblr_ksgwkdd71U1qzzu8ao1_500.jpg) &larr;
