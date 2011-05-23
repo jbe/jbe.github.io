@@ -1,10 +1,10 @@
 ---
 layout: post
-title: "Notes"
+title: "Notater"
 site: "/notes.html"
 published: true
 categories:
   - Norwegian
 ---
 
-A collection of [notes; mostly study notes from the University of Oslo](/notes.html).
+[Diverse notater fra studier ved UiO](/notes.html).
