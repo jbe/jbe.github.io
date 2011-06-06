@@ -12,7 +12,7 @@ layout: nil
 	<id>http://jostein.be/</id>
 	<author>
 		<name>Jostein Berre Eliassen</name>
-		<email>heREMOVETHISllo@joANDTHISstein.be</email>
+		<email>http://jostein.be</email>
 	</author>
 
 	{% for post in site.posts %}
