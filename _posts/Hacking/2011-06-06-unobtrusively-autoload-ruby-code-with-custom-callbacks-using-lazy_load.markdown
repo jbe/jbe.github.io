@@ -14,21 +14,21 @@ Some times, it is useful to "soft require" Rubygems. For example, if a dependenc
 
 {% highlight bash %}
 
-  gem install lazy_load
+gem install lazy_load
 
 {% endhighlight %}
 
 {% highlight ruby %}
 
-  LazyLoad.map(:Tilt, 'tilt',
-    'Tilt not found. Possible fix: gem install tilt')
+LazyLoad.map(:Tilt, 'tilt',
+  'Tilt not found. Possible fix: gem install tilt')
 
-  LazyLoad::Tilt
-  # => Tilt
+LazyLoad::Tilt
+# => Tilt
 
-   # or if Tilt is not available:
-  LazyLoad::Tilt
-  # => LazyLoad::DependencyError: Tilt not found. Possible fix: gem install tilt'  
+  # or if Tilt is not available:
+LazyLoad::Tilt
+# => LazyLoad::DependencyError: Tilt not found. Possible fix: gem install tilt'  
 
 {% endhighlight %}
 
