@@ -3,7 +3,7 @@ layout: content
 title: Photos
 ---
 
-&rarr; [Photosets on flickr](/images/29.media.tumblr.com/tumblr_ksgwkdd71U1qzzu8ao1_500.jpg) &larr;
+&rarr; [Web Albums](https://picasaweb.google.com/112701820012915996830) &larr;
 
 ![Nandi Hills](http://dl.dropbox.com/u/3580545/blog_images/nandi_hills.jpg)
 
