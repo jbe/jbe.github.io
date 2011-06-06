@@ -32,7 +32,7 @@ LazyLoad::Tilt
 
 {% endhighlight %}
 
-As a bonus, LazyLoad does not monkey patch. This is because it is scoped (unlike autoload). So when you register a callback for the Foo constant, referencing LazyLoad::Foo will trigger the callback. Simply referencing Foo will not trigger the callback.
+As a bonus, LazyLoad does not monkey patch. This is because it is scoped (unlike autoload). So when you register a callback for the Foo constant, referencing `LazyLoad::Foo` will trigger the callback. Simply referencing Foo will not trigger the callback.
 
 More samples and source code:
 
