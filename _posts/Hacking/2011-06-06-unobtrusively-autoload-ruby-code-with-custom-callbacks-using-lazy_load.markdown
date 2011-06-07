@@ -20,15 +20,33 @@ gem install lazy_load
 
 {% highlight ruby %}
 
-LazyLoad.map(:Tilt, 'tilt',
-  'Tilt not found. Possible fix: gem install tilt')
+  LazyLoad.map(:Tilt, 'tilt',
+    'Tilt not found. Possible fix: gem install tilt')
 
-LazyLoad::Tilt
-# => Tilt
+  # or equivalent with a callback:
+
+  LazyLoad.map(:Tilt) do
+    begin
+      require 'tilt'
+      Tilt
+    rescue LoadError
+      raise(LazyLoad::DependencyError,
+        'Tilt not found. Possible fix: gem install tilt')
+    end
+  end
+
+  Tilt
+  # => NameError: uninitialized constant Object::Tilt
+
+  LazyLoad::Tilt
+  # => Tilt
 
   # or if Tilt is not available:
-LazyLoad::Tilt
-# => LazyLoad::DependencyError: Tilt not found. Possible fix: gem install tilt'  
+  LazyLoad::Tilt
+  # => LazyLoad::DependencyError: Tilt not found. Possible fix: gem install tilt'
+
+  LazyLoad::Foo
+  # => NameError: uninitialized constant LazyLoad::Foo
 
 {% endhighlight %}
 
