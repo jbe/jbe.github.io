@@ -8,8 +8,6 @@ categories:
 link: "https://github.com/jbe/lazy_load"
 ---
 
-Some times, it is useful to "soft require" Rubygems. For example, if a dependency is unavailable, we might want to fall back to another implementation. If we are lazy loading (autoloading) code as we go along, we might also want to handle load errors in a graceful way, should they arise. This particularly applies to user facing code dealing with, for instance, a lot of template engine Gems which are lazy loaded on demand without any prior gurantee of them being available.
-
 [LazyLoad](https://github.com/jbe/lazy_load) is a simple way to lazily autoload code with callbacks. It is a slightly more elaborate and "softer" alternative to the [autoload](http://ruby-doc.org/core/classes/Module.html#M000443) method included in Ruby.
 
 {% highlight bash %}
