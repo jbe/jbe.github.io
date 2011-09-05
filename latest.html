@@ -1,0 +1,25 @@
+---
+layout: content
+title: Latest
+---
+
+
+<div class="listing">
+{% for post in site.posts %}
+  <div class="post">
+    <p class="title">
+      <a href="{{ post.url }}" title="{{ post.content | strip_html | escape | truncatewords: 80 }}">{{ post.title }}</a>
+      {% if post.site %}
+        <a class="site-link" href="{{ post.site }}" title="{{ post.content | strip_html | escape | truncatewords: 80 }}">Link</a>
+      {% endif %}
+      <span class="timestamp">
+        <time datetime="{{ post.date | date: '%Y-%m-%d' }}">{{ post.date | date: "%B %d, %Y" }}</time>
+      </span>
+    </p>
+    {% for mp3_path in post.mp3s %}
+      <embed type="application/x-shockwave-flash" flashvars="audioUrl={{ mp3_path }}" src="http://www.google.com/reader/ui/3523697345-audio-player.swf" width="400" height="27" quality="best"></embed>
+    {% endfor %}
+  </div>
+{% endfor %}
+</div>
+
