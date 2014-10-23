@@ -1,8 +1,7 @@
 ---
-layout: post
 title: "Lentil soup with barley, spinach and aniseeds"
-published: true
-categories: ["Cooking", "Vegetarian"]
+name: lentil-soup
+categories: ["Food"]
 ---
 
 ### Ingredients

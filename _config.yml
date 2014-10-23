@@ -1,3 +1,26 @@
 pygments: true
 markdown: rdiscount
 lsi: true
+
+permalink: /:title/
+
+
+defaults:
+  -
+    scope:
+      path: ""
+      type: "pages"
+    values:
+      layout: page
+  -
+    scope:
+      path: _posts/no
+    values:
+      layout: post
+      lang: no
+  -
+    scope:
+      path: _posts/en
+    values:
+      layout: post
+      lang: en
