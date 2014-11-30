@@ -1,0 +1,29 @@
+
+
+
+"no":
+  topics: ["Mat"]
+  frontpage:
+    name: "Forside"
+    url:  /
+  topics_menu:
+    name: "Temaer"
+    url:  "/temaer/"
+  about:
+    name: "Om"
+    url:  "/om/"
+  contact: "og hvordan ta kontakt"
+"en":
+  topics: ["Food"]
+  frontpage:
+    name: "Front page"
+    url:  "/en/"
+  topics_menu:
+    name: "Topics"
+    url:  "/topics/"
+  about:
+    name: "About"
+    url:  "/about/"
+  contact: "and how to contact"
+
+

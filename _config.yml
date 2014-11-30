@@ -1,4 +1,6 @@
-pygments: true
+safe: true
+timezone: "Europe/Oslo"
+highlighter: rouge
 markdown: rdiscount
 lsi: true
 
@@ -17,7 +19,7 @@ defaults:
       path: _posts/no
     values:
       layout: post
-      lang: no
+      lang: "no"
   -
     scope:
       path: _posts/en

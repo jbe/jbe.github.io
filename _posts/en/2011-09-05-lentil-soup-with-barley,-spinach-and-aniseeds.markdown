@@ -1,7 +1,7 @@
 ---
 title: "Lentil soup with barley, spinach and aniseeds"
 name: lentil-soup
-categories: ["Food"]
+topic: Food
 ---
 
 ### Ingredients

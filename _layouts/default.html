@@ -1,46 +1,66 @@
 
 <!DOCTYPE HTML>
 
-<html>
+<html lang="{{ page.lang }}">
   <head>
 	<meta charset="utf-8" />
-    <title>Jostein Berre Eliassen: {{ page.title }}</title>
+
+    <title>JBE: {{ page.title }}</title>
     <link  href="http://fonts.googleapis.com/css?family=Covered+By+Your+Grace:regular" rel="stylesheet" type="text/css" >
     <link rel="shortcut icon" href="/favicon.png" type="image/png">
-	<link rel="stylesheet" href="/css/syntax.css" />
-	<link rel="stylesheet" href="/css/main.css" />
+	<link rel="stylesheet" href="/main.css" />
+	<link rel="stylesheet" href="/syntax.css" />
     <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script>
-    <script type="text/javascript" src="/js/main.js"></script>
+    <script type="text/javascript" src="/main.js"></script>
     <link href="atom.xml" type="application/atom+xml" rel="alternate" title="jostein.be - all new posts" />
+    <script type="text/javascript">
+    (function() {
+        var path = '//easy.myfonts.net/v2/js?sid=249467(font-family=Al+Fresco)&sid=250875(font-family=Al+Fresco+Bold)&key=ra9NYeIUCs',
+            protocol = ('https:' == document.location.protocol ? 'https:' : 'http:'),
+            trial = document.createElement('script');
+        trial.type = 'text/javascript';
+        trial.async = true;
+        trial.src = protocol + path;
+        var head = document.getElementsByTagName("head")[0];
+        head.appendChild(trial);
+    })();
+    </script>
   </head>
-  <body>
-    <div id="outer"><div id="wrapper">
-      <div id="header">
-        <h1><a href="/">Jostein Berre Eliassen</a></h1>
-        <p>
-          &rarr;
-          <a href="/latest.html">Posts</a> &middot;
-          <a href="http://dropbox.com/gallery/3580545/1/drawings?h=be8783">Drawings</a> &middot;
-          <a href="http://github.com/jbe">Hacking</a> &middot;
-          <a href="http://intothenebula.bandcamp.com/">Old music</a>
-        </p>
-      </div>
 
-      {{ content }}
 
-      <div id="footer">
-        <p>
-          &copy; {{ site.time | date: "%Y" }}
-          &middot;
-          <a href="http://creativecommons.org/licenses/by-nc-sa/3.0/" title="Creative Commons by-nc-sa">License</a>
-          &middot;
-          <a href="http://github.com/jbe/jbe.github.com">Source</a>
-          &middot;
-          <a href="http://svusj.wufoo.com/forms/send-jostein-a-message/">Contact</a>
-        </p>
-      </div>
-    </div><div id="air"></div></div>
-    <div id="bg-fade"></div>
+  <body style="background-image: url('https://farm5.staticflickr.com/4082/4880605810_0104158039_o_d.jpg');">
+
+    <header class="sitewide">
+      <nav>
+        <h1><a href="#">Jostein Berre Eliassen</a></h1>
+        <ul>
+          <li><a href="#">About</a></li>
+          <li><a class="active" href="#">Things</a></li>
+          <li><a href="#">Contact</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main>
+      <header class="content">
+        <h1>You touch my tra la la</h1>
+        <p> &middot; <time datetime="1014-12-01">1014-12-01</time><p>
+      </header>
+      <article>
+        <p>My ding ding dong. Ahhh my ding ding dong.</p>
+        {% include article_list.html %}
+        {{ content }}
+      </article>
+      <footer>
+          <p><a href="#">English version</a></p>
+          <p>
+            &copy;
+            {{ site.time | date: "%Y" }}
+            Jostein Berre Eliassen
+            &middot;
+            <a href="http://svusj.wufoo.com/forms/send-jostein-a-message/">Contact</a></p>
+      </footer>
+    </main>
 
     <script type="text/javascript">
       var _gaq = _gaq || [];
@@ -52,6 +72,7 @@
         var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
       })();
     </script>
+
   </body>
 </html>
 

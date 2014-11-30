@@ -1,0 +1,5 @@
+<ul>
+  {% for menu in data.ui_translations[page.lang] %}
+    <li><a href="{{menu.url}}">{{menu.name}}</a></li>
+  {% endfor %}
+</ul>

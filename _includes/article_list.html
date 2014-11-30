@@ -1,0 +1,13 @@
+
+
+{% for topic in site.data.localization[page.lang].topics %}
+<p>{{ topic }}</p>
+  <ul>
+    {% for post in site.posts %}
+      {% if post.topic == topic %}
+        <li>{{post.title}}</li>
+      {% endif %}
+    {% endfor %}
+  </ul>
+{% endfor %}
+
