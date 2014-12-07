@@ -32,34 +32,20 @@
 
     <header class="sitewide">
       <nav>
-        <h1><a href="#">Jostein Berre Eliassen</a></h1>
+        <h1><a href="/">Jostein Berre Eliassen</a></h1>
         <ul>
-          <li><a href="#">About</a></li>
-          <li><a class="active" href="#">Things</a></li>
-          <li><a href="#">Contact</a></li>
+            {% assign pages = site.pages | sort: 'menu_order' %}
+            {% for p in pages %}
+            {% if p.lang == page.lang %}
+            <li><a href="{{p.url}}" {% if page.id == p.id %} class="active"{% endif %}> {{p.menu_name}}</a></li>
+            {% endif %}
+            {% endfor %}
         </ul>
       </nav>
     </header>
 
     <main>
-      <header class="content">
-        <h1>You touch my tra la la</h1>
-        <p> &middot; <time datetime="1014-12-01">1014-12-01</time><p>
-      </header>
-      <article>
-        <p>My ding ding dong. Ahhh my ding ding dong.</p>
-        {% include article_list.html %}
-        {{ content }}
-      </article>
-      <footer>
-          <p><a href="#">English version</a></p>
-          <p>
-            &copy;
-            {{ site.time | date: "%Y" }}
-            Jostein Berre Eliassen
-            &middot;
-            <a href="http://svusj.wufoo.com/forms/send-jostein-a-message/">Contact</a></p>
-      </footer>
+      {{ content }}
     </main>
 
     <script type="text/javascript">

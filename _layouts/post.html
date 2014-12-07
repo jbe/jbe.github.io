@@ -1,39 +1,34 @@
 ---
-layout: content
+layout: default
 ---
 
-<div class="post">
-  <h2 class="title">{{ page.title }}</h2>
-  <p class="timestamp">
-    <time datetime="{{ page.date | date: '%Y-%m-%d' }}">{{ page.date | date: "%B %d, %Y" }}</time>
+
+<header class="post content">
+  <h1>{{ page.title }}</h1>
+  <p>
     &middot;
-    {{ page.categories | array_to_sentence_string }}
-    {% if page.site %}
-      &rarr; <a href="{{ page.site }}">{{ page.site }}</a>
-    {% endif %}
+    <time datetime="{{ page.date | date: '%Y-%m-%d' }}">{{ page.date | date: "%B %d, %Y" }}</time>
   </p>
-  {% for mp3_path in page.mp3s %}
-    <embed type="application/x-shockwave-flash" flashvars="audioUrl={{ mp3_path }}" src="http://www.google.com/reader/ui/3523697345-audio-player.swf" width="400" height="27" quality="best"></embed>
-  {% endfor %}
-
-
-  <div class="body">
-    {{ content }}
-  </div>
-
-  <div class="related">
-    <p>Related articles:
-    {% for post in site.related_posts %}
-      <span class="post">
-        {% if forloop.index != 1 %}&middot;{% endif %}
-        <span class="title">
-          <a href="{{ post.url }}" title="{{ post.content | strip_html | escape | truncatewords: 80 }}">{{ post.title }}</a>
-        </span>
-      </span>
-    {% endfor %}
-  </div>
-</div>
-
+</header>
+<article>
+  {{ content }}
+</article>
+<footer>
+    <p>
+      {% assign posts = site.posts | where:"uid", page.uid | sort: 'path' %}
+      {% for p in posts %}
+      {% if p.lang != page.lang %}
+        &rarr; <a href="{{ p.url }}" class="{{ p.lang }}">{{ site.data.localization[p.lang].page_trans_link[p.lang]}}</a>
+      {% endif %}
+      {% endfor %}
+    </p>
+    <p>
+      &copy;
+      {{ site.time | date: "%Y" }}
+      Jostein Berre Eliassen
+      &middot;
+      <a href="http://svusj.wufoo.com/forms/send-jostein-a-message/">{{site.data.localization[page.lang].contact}}</a></p>
+</footer>
 
 
 

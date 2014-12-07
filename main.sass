@@ -43,6 +43,9 @@ $darkgray:  #1c1c1c
 
 html, body
   +slim
+  :background-attachment fixed
+  :background-position top
+  :background-repeat no-repeat
 
 header.sitewide
   +slim
@@ -50,6 +53,7 @@ header.sitewide
   :border-top 1px solid $darkgray
   :border-bottom 0.5em solid $lightgray
   :background-color $darkgray
+  :box-shadow 0 0 2em rgba(0, 0, 0, 0.7)
 
   nav
     +sitewidth
@@ -112,8 +116,9 @@ main
   +sitewidth
   :margin 0 auto 0 auto
   :background-color Black
-  :background-color rgba(0,0,0,0.7)
+  :background-color rgba(28,28,28,0.95)
   +border-radius(0 0 0.3em 0.3em)
+  :box-shadow 0px 0.6em 2em rgba(0, 0, 0, 0.4)
 
   header.content
     :margin 0
@@ -135,9 +140,12 @@ main
         :display inline
         :font 1em $monospace
 
+    p.separate
+      :display block
+
   article
     :margin 0 auto
-    :padding 2em 1em
+    :padding 2em
     :font 1em $monospace
     :background-color rgba(255, 255, 255, 0.8)
     :border-bottom 1px dotted $darkgray
@@ -160,6 +168,7 @@ main
     p
       +slim
       :padding 0.5em 0
+      :text-shadow 1px 1px 4px black
       a
         :color White
 

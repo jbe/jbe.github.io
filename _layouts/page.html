@@ -1,3 +1,28 @@
 ---
 layout: default
 ---
+
+
+<header class="page content">
+  <h1>{{ page.title }}</h1>
+  <p> &middot; {{ page.subtitle }}</p>
+</header>
+<article>
+  {{ content }}
+</article>
+<footer>
+    <p>
+      {% assign pages = site.pages | where:"id", page.id | sort: 'path' %}
+      {% for p in pages %}
+      {% if p.lang != page.lang %}
+        &rarr; <a href="{{ p.url }}" class="{{ p.lang }}">{{ site.data.localization[p.lang].page_trans_link[p.lang]}}</a>
+      {% endif %}
+      {% endfor %}
+    </p>
+    <p>
+      &copy;
+      {{ site.time | date: "%Y" }}
+      Jostein Berre Eliassen
+      &middot;
+      <a href="http://svusj.wufoo.com/forms/send-jostein-a-message/">{{site.data.localization[page.lang].contact}}</a></p>
+</footer>

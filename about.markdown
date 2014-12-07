@@ -1,15 +1,12 @@
 ---
-layout: page
 lang: "en"
-name: about
+id: about
+permalink: "/english.html"
+menu_name: "About"
+menu_order: 1
+title: Helloes
+subtitle: "and welcomes"
 ---
 
-Hello there. This kinda is my homepage. Here are some of bits and bobs from the internet and that I wrote sort of. Like some interests and random stuff & shit.
+Halloes. My name be Jostein. I am dude who live Oslo, Norway. This be my page web. I sometimes make page web.
 
-Music is a thing. There's some stuff on Soundcloud.
-
-I program now and then. There's some on Github.
-
-Your mom is a man.
-
-Click here to write to me.

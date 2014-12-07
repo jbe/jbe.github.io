@@ -1,6 +1,6 @@
 ---
 title: "Linsesuppe med bygg, spinat og anis"
-name: lentil-soup
+uid: lentil-soup
 topic: Mat
 ---
 

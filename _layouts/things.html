@@ -3,4 +3,38 @@ layout: default
 ---
 
 
+<header class="content">
+  <h1>{{ page.title }}</h1>
+  <p> &middot; {{ page.subtitle }}<p>
+</header>
+<article>
+  <p>
+  <a href="http://github.com/jbe/jbe.github.com">Source</a> &middot;
+  <a href="http://github.com/jbe">Hacking</a> &middot;
+  <a href="http://intothenebula.bandcamp.com/">Old music</a>
+  </p>
+
+  {% include article_list.html %}
+
+    {% for post in site.posts %}
+      <p class="title">
+        <a href="{{ post.url }}" title="{{ post.content | strip_html | escape | truncatewords: 80 }}">
+            {{ post.title }}</a>
+          <time datetime="{{ post.date | date: '%Y-%m-%d' }}">{{ post.date | date: "%B %d, %Y" }}</time>
+      </p>
+    {% endfor %}
+
+
+  {{ content }}
+</article>
+<footer>
+    <p>
+      {% assign pages = site.pages | where:"id", page.id | sort: 'path' %}
+      {% for p in pages %}
+      {% if p.lang != page.lang %}
+        &rarr; <a href="{{ p.url }}" class="{{ p.lang }}">{{ site.data.localization[p.lang].page_trans_link[p.lang]}}</a>
+      {% endif %}
+      {% endfor %}
+    </p>
+</footer>
 

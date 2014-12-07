@@ -10,19 +10,21 @@ permalink: /:title/
 defaults:
   -
     scope:
-      path: ""
-      type: "pages"
-    values:
-      layout: page
-  -
-    scope:
-      path: _posts/no
+      type: "posts"
     values:
       layout: post
+  -
+    scope:
+      path: "_posts/no"
+    values:
       lang: "no"
   -
     scope:
-      path: _posts/en
+      path: "_posts/en"
     values:
-      layout: post
-      lang: en
+      lang: "en"
+  -
+    scope:
+      type: "pages"
+    values:
+      layout: page
