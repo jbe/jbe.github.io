@@ -16,7 +16,7 @@ $ ->
 
   timer = 0
 
-  $('header.sitewide, main').css({'position': 'relative', 'z-index': '1'})
+  $('header.sitewide, #main').css({'position': 'relative', 'z-index': '1'})
 
   width = 0
   height = 0
