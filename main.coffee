@@ -14,7 +14,7 @@ $ ->
     subhead.css('position', 'relative')
     subhead.css('top', '-0.25em')
     
-    $('main ul.links li span').css('top', '-0.5em')
+    $('#main ul.links li span').css('top', '-0.5em')
 
   $.fn.smartBackgroundImage = (url) ->
     t = this
