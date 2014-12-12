@@ -76,7 +76,14 @@ html, body
   +slim
   :background-attachment fixed
   :background-position top
-  :background-repeat no-repeat
+
+body
+  background-color: Black
+  background-image: url('/congruent_outline.png')
+  :background-repeat repeat
+  @media only screen and (min-device-width: 1000px)
+    :background-repeat no-repeat
+    background-image: url('https://farm5.staticflickr.com/4082/4880605810_0104158039_o_d.jpg')
 
 header.sitewide
   +slim
@@ -95,13 +102,13 @@ header.sitewide
     +flex-flow(row nowrap)
     +justify-content(space-between)
 
-    @media screen and (max-width: 600px)
+    @media screen and (max-width: $medium-breakpoint)
       :display block
       :padding-bottom 0.5em
 
     h1
       +slim
-      @media screen and (max-width: 600px)
+      @media screen and (max-width: $medium-breakpoint)
         :padding-left 1em
       a
         +slim
