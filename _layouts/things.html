@@ -2,39 +2,50 @@
 layout: default
 ---
 
+<ul class="links">
+  <li><a href="//soundcloud.com/wrathfromthesewers" >{% include svg/soundcloud.svg %} <span>SoundCloud</span></a></li>
+  <li><a href="https://www.youtube.com/channel/UCHri2WBZoCjMj3DCLebVMhQ" >{% include svg/youtube.svg %} <span>YouTube</span></a></li>
+  <li><a href="//github.com/jbe" >{% include svg/github.svg %} <span>Github</span></a></li>
+  <li><a href="//intothenebula.bandcamp.com/" >{% include svg/bandcamp.svg %} <span>Bandcamp</span></a></li>
+  <li><a href="//stackoverflow.com/users/475468/jostein" >{% include svg/stackoverflow.svg %}<span>StackOverflow</span></a></li>
+</ul>
 
-<header class="content">
-  <h1>{{ page.title }}</h1>
-  <p> &middot; {{ page.subtitle }}<p>
+<header class="sub">
+  <h2>{{ page.labels.projects }}</h2>
 </header>
-<article>
-  <p>
-  <a href="http://github.com/jbe/jbe.github.com">Source</a> &middot;
-  <a href="http://github.com/jbe">Hacking</a> &middot;
-  <a href="http://intothenebula.bandcamp.com/">Old music</a>
+
+<ul class="links lighter">
+  <li><a href="//daily.bio" >{% include svg/diary.svg %} <span>daily.bio</span></a></li>
+  <li><a href="#" >{% include svg/link.svg %} <span>.. ? ..</span></a></li>
+</ul>
+
+
+<header class="sub">
+  <h2>{{ page.labels.articles }}</h2>
+</header>
+
+<div class="articles">
+{% for post in site.posts %}
+  {% if post.lang == page.lang %}
+  <p class="post">
+    <span>
+      <a href="{{ post.url }}" title="{{ post.content | strip_html | escape | truncatewords: 80 }}">
+      {{ post.title }}</a>
+    </span>
+    <span>&sext;
+      <time datetime="{{ post.date | date: '%Y-%m-%d' }}">{{ post.date | date: "%B %d, %Y" }}</time>
+    </span>
   </p>
+  {% endif %}
+{% endfor %}
+  <p class="lang-link"><small>
+  {% assign pages = site.pages | where:"id", page.id | sort: 'path' %}
+  {% for p in pages %}
+  {% if p.lang != page.lang %}
+    &rarr; <a href="{{ p.url }}" class="{{ p.lang }}">{{ page.labels.articles_in }}</a>
+  {% endif %}
+  {% endfor %}
+  </p></small>
+</div>
 
-  {% include article_list.html %}
-
-    {% for post in site.posts %}
-      <p class="title">
-        <a href="{{ post.url }}" title="{{ post.content | strip_html | escape | truncatewords: 80 }}">
-            {{ post.title }}</a>
-          <time datetime="{{ post.date | date: '%Y-%m-%d' }}">{{ post.date | date: "%B %d, %Y" }}</time>
-      </p>
-    {% endfor %}
-
-
-  {{ content }}
-</article>
-<footer>
-    <p>
-      {% assign pages = site.pages | where:"id", page.id | sort: 'path' %}
-      {% for p in pages %}
-      {% if p.lang != page.lang %}
-        &rarr; <a href="{{ p.url }}" class="{{ p.lang }}">{{ site.data.localization[p.lang].page_trans_link[p.lang]}}</a>
-      {% endif %}
-      {% endfor %}
-    </p>
-</footer>
 

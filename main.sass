@@ -14,6 +14,9 @@
   :-moz-border-radius $radius
   :-ms-border-radius $radius
 
+=filter-drop-shadow($args)
+  :filter drop-shadow($args)
+  :-webkit-filter drop-shadow($args)
 
 
 $medium-breakpoint: 600px
@@ -36,7 +39,7 @@ $darkgray:  #1c1c1c
     :width 700px
   @media screen and (min-width: 1400px)
     :width 50%
-
+  :min-width 320px
 
 
 
@@ -65,6 +68,7 @@ header.sitewide
 
     @media screen and (max-width: 600px)
       :display block
+      :padding-bottom 0.5em
 
     h1
       +slim
@@ -81,8 +85,8 @@ header.sitewide
       :list-style-type none
       :padding 2em 0 0 0
       :margin 0 0 0 1em
-      flex: 1
-      :max-width 19em
+      :flex 1
+      :max-width 18em
       :display flex
       :flex-flow row
       :justify-content space-between
@@ -101,7 +105,7 @@ header.sitewide
           :padding 0 0 0.6em 0
 
           @media screen and (max-width: $medium-breakpoint)
-            :padding 0 0 0.5em 0
+            :padding 0.3em 0.6em 0.6em 0.6em
 
           &:hover
             :color Yellow
@@ -110,11 +114,13 @@ header.sitewide
           :border-bottom 1.5em solid $redwine
 
           @media screen and (max-width: $medium-breakpoint)
-            :border-bottom 0.5em solid $redwine
+            :border-bottom none
+            :color $redwine + #311
+            :font-weight bold
 
 main
   +sitewidth
-  :margin 0 auto 0 auto
+  :margin 0 auto 4em auto
   :background-color Black
   :background-color rgba(28,28,28,0.95)
   +border-radius(0 0 0.3em 0.3em)
@@ -122,40 +128,196 @@ main
 
   header.content
     :margin 0
-    :padding 4em 1em 1em 1em
+    :padding 4em 2em 1em 2em
+    :display flex
+    :flex-flow row
+    :flex-wrap wrap
+    :justify-content space-between
 
     h1
+      +slim
       :margin 0 0 0 0
       :font-weight normal
       :text-shadow 1px 1px 4px black
       :color White
-      :display inline
       :font 1em $monospace
+      :padding-right 0.5em
 
     p
+      +slim
       :color $lightgray
-      :display inline
       time
         :font-size 0.9
-        :display inline
         :font 1em $monospace
 
-    p.separate
-      :display block
+    p.right
+      text-align: right
+
+    @media screen and (max-width: $medium-breakpoint)
+      :background-color rgba(255, 255, 255, 0.8)
+      h1
+        :color Black
+        :text-shadow none
+        :font-weight bold
+
+  header.sub
+    :margin 0 -1em 0 -1em
+    :padding 0 2em 0 2em
+    :background-color #333
+    :text-align center
+    :box-shadow 0px 0.2em 2em rgba(0, 0, 0, 0.9)
+    :position relative // for correct shadow
+    :height 4em
+    :border-radius 0.3em
+
+    h2
+      :margin 0 0 0 0
+      :font-weight normal
+      :text-shadow 1px 1px 0.6em Black
+      :color #ddd
+      :display inline
+      :font 3em Origo
+      :position relative // for correct shadow
+      :top -0.25em
+
+    @media screen and (max-width: $medium-breakpoint)
+      :height 3em
+      :text-align left
+      :padding-left 3em
+      :margin-bottom -1em
+      h2
+        :top -0.3em
+        :font-size 2.3em
+
+
+    
+  ul.links
+    :display flex
+    :flex-flow row
+    :flex-wrap wrap
+    :justify-content space-between
+    :margin 0
+    :padding 3em 2em 2em 2em
+    :text-align center
+    :list-style none
+    :border-left 1em solid $redwine - #222
+    :border-right 1em solid $redwine - #222
+
+    li
+      :flex 1
+      +slim
+      :display flex
+      :flex-flow column
+      :min-width 5em
+
+      a
+        :text-decoration none
+        :color $lightgray
+        :font 0.9em $monospace
+        :transition color 0.3s ease
+
+        &:hover
+          :color White
+
+      svg
+        :height 3em
+        :width 5em
+        :margin 0 auto
+        :padding 1em 0
+        :display block
+        +filter-drop-shadow(1px 1px 0.5em Black)
+
+
+      span
+        :position relative
+        :top -1em
+        :text-shadow 1px 1px 4px Black
+    
+      path, polygon
+        :fill $redwine + #320
+
+      &:hover
+        path, polygon
+          :fill Orange
+
+
+  ul.links.lighter
+    :background-color #483
+    :border-left 2em solid $darkgray
+    :border-right 2em solid $darkgray
+
+    li a
+      :color Black
+      svg
+        +filter-drop-shadow(0 0 0 Transparent)
+        path, polygon
+          :fill Black
+      span
+        :text-shadow 1px 1px 2px Gray
+
+      &:hover
+        :font-weight bold
+
+        svg
+          +filter-drop-shadow(1px 1px 2em Yellow)
+          path, polygon
+            :fill Black
+
+    @media screen and (max-width: $medium-breakpoint)
+      :border-width 1em
+
+
+  div.articles
+    :margin -1em 0 0 0
+    :padding 2em
+    :font 1.1em 'Rosario', sans-serif
+    :color $lightgray
+    a
+      :color White
+      :text-decoration none
+      &:hover
+        :color Yellow
+
+    p.lang-link
+      :margin-top 2em
 
   article
     :margin 0 auto
     :padding 2em
-    :font 1em $monospace
+    //:font 1em $monospace
+    :font 1.1em 'Rosario', sans-serif
+
     :background-color rgba(255, 255, 255, 0.8)
-    :border-bottom 1px dotted $darkgray
-    :border-top 1px dotted $darkgray
 
     p
       :line-height 150%
 
-    pre
-      :font-family $monospace
+    //pre
+    //  :font-family $monospace
+
+    .nerd-mode
+      :margin-top 1em
+      a
+        :text-decoration none
+        :color $redwine
+        svg
+          path, polygon
+            :fill Black
+        span
+          :position relative
+          :top -1em
+          :text-decoration underline
+        &:hover
+          svg
+            +filter-drop-shadow(0 0 1em White)
+          span
+            :text-shadow 0 0 0.5em White
+            :color Black
+    input, textarea
+      :font 1em 'Rosario', sans-serif
+      :padding 0.5em
+
+
 
   footer
     :padding 1.5em 1em
@@ -171,6 +333,9 @@ main
       :text-shadow 1px 1px 4px black
       a
         :color White
+
+  @media screen and (max-width: $medium-breakpoint)
+    :margin-bottom 0
 
 p
   a

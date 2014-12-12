@@ -1,0 +1,39 @@
+---
+layout: default
+---
+
+<header class="page content">
+  <h1>&sung; {{ page.title }}</h1>
+  <p class="right"><small>{{ site.time | date: "%d-%m-%Y" }}</small></p>
+</header>
+
+<article>
+  {{ page.labels.about_me }}
+  <div class="nerd-mode">
+    <a href="#nerd-mode" id="nerd-mode-button">{% include svg/nerd.svg %} <span>{{ page.labels.nerd_mode }}</span></a>
+  </div>
+</article>
+
+<header class="sub">
+    <h2><small>{{ page.labels.web_developer }}</small></h2>
+</header>
+
+<article>
+  {{ content }}
+</article>
+
+<footer>
+    <p>
+      {% assign pages = site.pages | where:"id", page.id | sort: 'path' %}
+      {% for p in pages %}
+      {% if p.lang != page.lang %}
+        &rarr; <a href="{{ p.url }}" class="{{ p.lang }}">{{ site.data.localization[p.lang].page_trans_link[p.lang]}}</a>
+      {% endif %}
+      {% endfor %}
+    </p>
+    <p>
+      &copy;
+      {{ site.time | date: "%Y" }}
+      Jostein Berre Eliassen
+    </p>
+</footer>

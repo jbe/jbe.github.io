@@ -5,10 +5,22 @@ layout: default
 
 <header class="page content">
   <h1>{{ page.title }}</h1>
-  <p> &middot; {{ page.subtitle }}</p>
 </header>
 <article>
   {{ content }}
+
+  <form accept-charset="UTF-8" action="{{ page.form_url }}" method="POST">
+    <input type="hidden" name="utf8" value="✓">
+    <p>
+    <input type="email" name="email" placeholder="{{ page.labels.your_email }}">
+    <input type="text" name="name" placeholder="{{ page.labels.your_name }}">
+    </p>
+    <textarea rows="4" cols="50" name="message" placeholder="{{ page.labels.your_message }}"></textarea>
+    <p>
+    <input type="submit" value="{{ page.labels.submit }}">
+    </p>
+  </form>
+
 </article>
 <footer>
     <p>
@@ -23,8 +35,6 @@ layout: default
       &copy;
       {{ site.time | date: "%Y" }}
       Jostein Berre Eliassen
-      &middot;
-      {% include contact_link.html %}
     </p>
 
 </footer>
