@@ -106,6 +106,7 @@ header.sitewide
 
     h1
       +slim
+      :display inline // for IE!
       @media screen and (max-width: $medium-breakpoint)
         :padding-left 1em
       a
@@ -197,7 +198,7 @@ header.sitewide
 
   header.sub
     :margin 0 -1em 0 -1em
-    :padding 0
+    :padding 0.6em 0 0.1em 0
     :background-color #333
     :text-align center
     :box-shadow 0px 0.2em 2em rgba(0, 0, 0, 0.9)
@@ -206,15 +207,12 @@ header.sitewide
 
     h2
       :margin 0 0 0 0
-      :padding 0.3em 0 0.1em 0
       :font 47px Origo
       :font-weight normal
       :text-shadow 1px 1px 0.6em Black
       :line-height 1em
       :color #ddd
-      &:after
-        :display inline-block
-        :height 100px
+      :display inline // just a test
 
     @media screen and (max-width: $medium-breakpoint)
       :height 3em
