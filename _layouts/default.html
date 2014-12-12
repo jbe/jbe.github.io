@@ -5,25 +5,14 @@
   <head>
 	<meta charset="utf-8" />
 
-    <title>JBE: {{ page.title }}</title>
-    <link  href="http://fonts.googleapis.com/css?family=Covered+By+Your+Grace:regular" rel="stylesheet" type="text/css" >
+    <title>{% if page.page_title %}{{page.page_title}}{% else %}{{ page.title }}{% endif %}</title>
+
     <link rel="shortcut icon" href="/favicon.png" type="image/png">
 	<link rel="stylesheet" href="/main.css" />
-	<link rel="stylesheet" href="/syntax.css" />
-    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script>
     <script type="text/javascript" src="/main.js"></script>
     <link href="atom.xml" type="application/atom+xml" rel="alternate" title="jostein.be - all new posts" />
     <script type="text/javascript">
-    (function() {
-        var path = '//easy.myfonts.net/v2/js?sid=249467(font-family=Al+Fresco)&sid=250875(font-family=Al+Fresco+Bold)&key=ra9NYeIUCs',
-            protocol = ('https:' == document.location.protocol ? 'https:' : 'http:'),
-            trial = document.createElement('script');
-        trial.type = 'text/javascript';
-        trial.async = true;
-        trial.src = protocol + path;
-        var head = document.getElementsByTagName("head")[0];
-        head.appendChild(trial);
-    })();
+      {% include MyFontsWebfontsKit.js %}
     </script>
   </head>
 
@@ -37,7 +26,9 @@
             {% assign pages = site.pages | sort: 'menu_order' %}
             {% for p in pages %}
             {% if p.lang == page.lang %}
+            {% unless p.hide %}
             <li><a href="{{p.url}}" {% if page.id == p.id %} class="active"{% endif %}> {{p.menu_name}}</a></li>
+            {% endunless %}
             {% endif %}
             {% endfor %}
         </ul>

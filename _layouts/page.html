@@ -24,5 +24,7 @@ layout: default
       {{ site.time | date: "%Y" }}
       Jostein Berre Eliassen
       &middot;
-      <a href="http://svusj.wufoo.com/forms/send-jostein-a-message/">{{site.data.localization[page.lang].contact}}</a></p>
+      {% include contact_link.html %}
+    </p>
+
 </footer>

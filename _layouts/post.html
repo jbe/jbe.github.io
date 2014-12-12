@@ -16,18 +16,28 @@ layout: default
 <footer>
     <p>
       {% assign posts = site.posts | where:"uid", page.uid | sort: 'path' %}
+      {% assign has_translation = false %}
       {% for p in posts %}
       {% if p.lang != page.lang %}
         &rarr; <a href="{{ p.url }}" class="{{ p.lang }}">{{ site.data.localization[p.lang].page_trans_link[p.lang]}}</a>
+        {% assign has_translation = true %}
       {% endif %}
       {% endfor %}
+      {% unless has_translation %}
+        &rarr;
+        {% if page.lang == "en" %}
+          <a href="/" class="no">Norsk hovedside</a>
+        {% else %}
+          <a href="/english.html" class="en">English front page</a>
+        {% endif %}
+      {% endunless %}
     </p>
     <p>
       &copy;
       {{ site.time | date: "%Y" }}
       Jostein Berre Eliassen
       &middot;
-      <a href="http://svusj.wufoo.com/forms/send-jostein-a-message/">{{site.data.localization[page.lang].contact}}</a></p>
+      {% include contact_link.html %}
 </footer>
 
 

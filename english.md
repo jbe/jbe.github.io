@@ -1,7 +1,7 @@
 ---
 lang: "en"
 id: about
-permalink: "/english.html"
+page_title: "Jostein Berre Eliassen"
 menu_name: "About"
 menu_order: 1
 title: Helloes
