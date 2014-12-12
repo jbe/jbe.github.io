@@ -21,5 +21,3 @@ Trenger du hjelp med 책 ta i bruk nettet, n책 kunder, med 책 f책 kontroll, med �
 
 [Ta kontakt!](/kontakt.html)
 
-Her er et eksempel p책 en annen nettside jeg har laget: [daily.bio](//daily.bio)
-
