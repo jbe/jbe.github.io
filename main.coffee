@@ -5,6 +5,15 @@
 
 $ ->
 
+  isMac = navigator.platform.toUpperCase().indexOf('MAC') != -1
+  isWindows = navigator.platform.toUpperCase().indexOf('WIN') != -1
+  isLinux = navigator.platform.toUpperCase().indexOf('LINUX') != -1
+
+  if isWindows
+    subhead = $('header h2')
+    subhead.css('position', 'relative')
+    subhead.css('top', '-0.25em')
+
   $.fn.smartBackgroundImage = (url) ->
     t = this
     # create an img so the browser will download the image:
