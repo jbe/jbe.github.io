@@ -29,7 +29,7 @@
   :-webkit-box-flex $args      //* OLD - iOS 6-, Safari 3.1-6 */
   :-moz-box-flex $args         //* OLD - Firefox 19- */
   :-webkit-flex $args          //* Chrome */
-  //:-ms-flex $args              //* IE 10 */
+  :-ms-flex $args              //* IE 10 */
   :flex $args                  //* 
 
 =flex-flow($args)
@@ -120,7 +120,7 @@ header.sitewide
       :list-style-type none
       :padding 2em 0 0 0
       :margin 0 0 1em 0
-      +flex(1)
+      //+flex(1)
       :max-width 18em
       +display-flex
       //+align-items(flex-start)
