@@ -94,10 +94,10 @@ header.sitewide
     +sitewidth
     :margin 0 auto
     :padding 1.4em 0 0 0
-    //+display-flex
+    +display-flex
     //+align-items(flex-start)
-    //+flex-flow(row nowrap)
-    //+justify-content(space-between)
+    +flex-flow(row nowrap)
+    +justify-content(space-between)
 
     @media screen and (max-width: $medium-breakpoint)
       :display block
@@ -107,7 +107,6 @@ header.sitewide
       +slim
       @media screen and (max-width: $medium-breakpoint)
         :padding-left 1em
-      :float left
       a
         +slim
         :color White
@@ -117,11 +116,10 @@ header.sitewide
         :font-weight normal
         :font-style normal
     ul
-      :float right
       :font 1em $monospace
       :list-style-type none
       :padding 2em 0 0 0
-      :margin 0 0 1em 1em
+      :margin 0 0 1em 0
       //+flex(0.5)
       :max-width 18em
       +display-flex
@@ -130,17 +128,19 @@ header.sitewide
       +justify-content(space-between)
 
       @media screen and (max-width: $medium-breakpoint)
-        :padding 0 0 0 0
+        :padding 0 0 0 1.5em
         +flex-flow(row wrap)
 
       li
-        :margin-left 1em
+        :margin-left 1.6em
+        @media screen and (max-width: $medium-breakpoint)
+          :margin-left 0
 
         a
           :text-decoration none
-          :margin 0.7em 0
+          :margin 0
           :color white
-          :padding 0 0 0.6em 0
+          :padding 0 0 0.3em 0
 
           @media screen and (max-width: $medium-breakpoint)
             :padding 0.3em 0.6em 0.6em 0.6em
@@ -382,6 +382,3 @@ p
   a
     img
       border: none
-
-.clearfix
-  :clear both
