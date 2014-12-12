@@ -19,7 +19,7 @@ Jeg lager alt fra enkle nettsider til interaktive forretningssystemer. Jeg koder
 
 Trenger du hjelp med å ta i bruk nettet, nå kunder, med å få kontroll, med å bearbeide tekst, eller noe helt annet? 
 
-[Ta kontakt, så finner vi ut hva som lønner seg](/kontakt.html)
+[Ta kontakt!](/kontakt.html)
 
 Her er et eksempel på en annen nettside jeg har laget: [daily.bio](//daily.bio)
 
