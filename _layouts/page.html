@@ -8,18 +8,10 @@ layout: default
 </header>
 
 <article>
-  {{ page.labels.about_me }}
+  {{ content }}
   <div class="nerd-mode">
     <a href="#nerd-mode" id="nerd-mode-button">{% include svg/nerd.svg %} <span>{{ page.labels.nerd_mode }}</span></a>
   </div>
-</article>
-
-<header class="sub">
-    <h2><small>{{ page.labels.web_developer }}</small></h2>
-</header>
-
-<article>
-  {{ content }}
 </article>
 
 <footer>
