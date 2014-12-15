@@ -12,4 +12,4 @@ labels:
   nerd_mode:     "Activate Nerd Mode"
 ---
 
-This is my homepage, where I link to different things that I am into. Have a look around, but don't click on the button unless you are a nerd."
+This is my homepage, where I link to different things that I am into. Have a look around, but don't click on the button unless you are a nerd.
