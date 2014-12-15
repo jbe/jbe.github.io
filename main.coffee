@@ -13,6 +13,8 @@ $ ->
     subhead = $('header h2')
     subhead.css('position', 'relative')
     subhead.css('top', '-0.25em')
+    
+    $('#main ul.links li span').css('top', '0')
 
   $.fn.smartBackgroundImage = (url) ->
     t = this

@@ -14,3 +14,4 @@ labels:
 ---
 
 Dette er hjemmesiden min, der jeg legger ut forskjellige ting jeg driver med. Du får se deg litt omkring. Men ikke klikk på knappen under med mindre du er nørd.
+
