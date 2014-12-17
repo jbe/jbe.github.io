@@ -15,13 +15,22 @@ timed_loop = (interval, times, fun) ->
 
 Josse =
   swap_bg: (url) ->
+    load_image = () ->
+      $("html").css('background-image', 'url('+url+')' )
+      timed_loop 30, 40, (i) ->
+        $('body').css("background-color", "rgba(4, 4, 4, " + (1 - i / 40) + ")")
+
+    loaded = false
+    faded = false
+    $('<img />').attr('src', url).load ->
+      loaded = true
+      load_image if faded
     timed_loop 30, 40, (i) ->
       $('body').css("background-color", "rgba(4, 4, 4, " + (i / 40) + ")")
       if i == 39
-        $('<img />').attr('src', url).load ->
-          $("html").css('background-image', 'url('+url+')' )
-        timed_loop 30, 40, (i) ->
-          $('body').css("background-color", "rgba(4, 4, 4, " + (1 - i / 40) + ")")
+        faded = true
+        load_image() if loaded
+
 
 
 
@@ -103,11 +112,21 @@ $ ->
     else
       alert('Nerd mode is only available on large screens.')
 
+###
+  $("body a").each (i, elm) ->
+    href = $(elm).attr('href')
+    console.log(href)
+    if href.indexOf("//" == -1) or href.indexOf("localhost" != -1)
+      $(elm).click (event) ->
+        event.preventDefault()
+        console.log href
+        jqxhr = $.get href, (data) ->
+          console.log(data)
+        jqxhr.fail ->
+          console.log("fail!")
+          window.location = href
+        #jqxhr.always ->
+###
 
-
-
-  #$("a").each ->
-  #  if (this + "") == location.href.toLowerCase()
-  #    $(this).addClass("selected")
 
 
