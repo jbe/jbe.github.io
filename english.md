@@ -1,6 +1,7 @@
 ---
 lang: "en"
 id: about
+permalink: /english
 layout: page
 page_title: "Jostein Berre Eliassen"
 in_menu: main

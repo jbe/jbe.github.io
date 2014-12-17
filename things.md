@@ -1,6 +1,7 @@
 ---
 layout: things
 lang: "en"
+permalink: /things
 id: things
 in_menu: main
 menu_name: "Things"
