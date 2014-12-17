@@ -2,6 +2,29 @@
 ---
 
 
+timed_loop = (interval, times, fun) ->
+  counter = 0
+  timer = false
+  payload = () ->
+    if counter < times
+      fun(counter)
+      counter += 1
+    else
+      clearInterval(timer)
+  timer = setInterval(payload, interval)
+
+Josse =
+  swap_bg: (url) ->
+    timed_loop 30, 40, (i) ->
+      $('body').css("background-color", "rgba(4, 4, 4, " + (i / 40) + ")")
+      if i == 39
+        $('<img />').attr('src', url).load ->
+          $("html").css('background-image', 'url('+url+')' )
+        timed_loop 30, 40, (i) ->
+          $('body').css("background-color", "rgba(4, 4, 4, " + (1 - i / 40) + ")")
+
+
+
 
 $ ->
 
@@ -16,15 +39,7 @@ $ ->
     
     $('#main ul.links li span').css('top', '0')
 
-  $.fn.smartBackgroundImage = (url) ->
-    t = this
-    # create an img so the browser will download the image:
-    $('<img />').attr('src', url).load ->
-      t.each ->
-        $(this).css('background', 'url('+url+') fixed no-repeat center center' )
-      $('#bg-fade').fadeOut(1500)
-    this
-
+  
   timer = 0
 
   $('header.sitewide, #main').css({'position': 'relative', 'z-index': '1'})
@@ -32,20 +47,29 @@ $ ->
   width = 0
   height = 0
 
+  set_background = false
+
   $(window).resize ->
     width = $('html').width()
     height = $('html').height()
     $('canvas#matrix').attr('width', width)
     $('canvas#matrix').attr('height', height)
 
+
+    if width >= 1000 and !set_background
+      Josse.swap_bg("https://farm5.staticflickr.com/4082/4880605810_0104158039_o_d.jpg")
+      set_background = true
+
   $(window).resize()
 
   enter_nerd_mode = () ->
+    #$('.nerd-mode').after("<iframe width='100%' height='20' scrolling='no' frameborder='no' src='https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/181874646&amp;color=ff5500&amp;inverse=false&amp;auto_play=false&amp;show_user=true'></iframe>")
     $('body').prepend("<canvas id='matrix' style='position: fixed; height: 100%; width: 100%; z-index: 0;'></canvas>")
     $('canvas#matrix').attr('width', width)
     $('canvas#matrix').attr('height', height)
     c1 = document.getElementById("matrix")
     ctx1 = c1.getContext("2d")
+
 
     yPositions = Array(300).join(0).split('')
 
@@ -81,7 +105,6 @@ $ ->
 
 
 
-  #$('html').smartBackgroundImage(randomBg())
 
   #$("a").each ->
   #  if (this + "") == location.href.toLowerCase()
