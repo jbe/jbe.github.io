@@ -1,7 +1,7 @@
 ---
 lang: "no"
 id: contact
-permalink: /kontakt
+permalink: /kontakt/
 layout: contact
 
 title: Kontakt meg

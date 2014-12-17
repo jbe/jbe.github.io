@@ -1,7 +1,7 @@
 ---
 layout: things
 lang: "no"
-permalink: /ting
+permalink: /ting/
 id: things
 in_menu: main
 menu_name: "Ting"
