@@ -68,6 +68,9 @@ ul.menu
         :color white
         :opacity 0.2
         :text-shadow 1px 1px 20px black
+        @media screen and (max-width: $break-large)
+          :opacity 0.4
+          :text-shadow 0 0 10px black
 
       &:hover
         i.fa
@@ -107,6 +110,7 @@ ul.menu:after
       @media screen and (max-width: $break-large)
         :font-size 42px
         :transform rotate(0)
+        :text-shadow 0 0 45px #444
         span
           :transform rotate(0)
       @media screen and (max-width: $break-small)
