@@ -13,7 +13,7 @@ uglify  = require 'uglify-js'
 sass    = require 'node-sass'
 datauri = require 'datauri'
 jade    = require 'jade'
-watch  = require 'watch'
+watch   = require 'watch'
 
 build = ->
   console.log "Building.."

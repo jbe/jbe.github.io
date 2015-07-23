@@ -8,7 +8,6 @@ html
     link(href='http://fonts.googleapis.com/css?family=Permanent+Marker' rel='stylesheet' type='text/css')
     link(rel="shortcut icon" href=favicon)
     style!= css
-    script(type="text/javascript")!= js
 
 
   body(style=bg_paisley)
@@ -53,11 +52,5 @@ html
                 .popup
                   h4 Reachable by mail..
                   p Contact the dude!
-
-
-
-
-
-
-
-
+  // at the end to ensure document is ready.
+  script(type="text/javascript")!= js
