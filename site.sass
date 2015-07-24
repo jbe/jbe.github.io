@@ -84,6 +84,34 @@ ul.menu:after
   display: table
   clear: both
 
+body.handheld .hover-thing .non-hover, body.handheld .hover-thing .hover
+  :opacity 1.0
+  &:hover
+    :opacity 1.0
+
+body.handheld .hover-thing .non-hover
+  :transform none
+  h1
+    :font-size 64px
+    :opacity 0.2
+    :margin-top -90px
+    span
+      :transform none
+      :margin-right 0.5em
+
+    @media screen and (max-width: $break-large)
+      :font-size 32px
+      :margin-top -50px
+      :opacity 0.5
+    @media screen and (max-width: $break-small)
+      :font-size 24px
+
+body.handheld .hover-thing:hover .non-hover
+  :transform none
+  h1
+    span
+      :transform none
+
 
 .hover-thing
   .non-hover
@@ -156,4 +184,16 @@ li.role
       p
         :opacity 0.4
 
+body.handheld li.role
+  .popup
+    :opacity 1.0
+    :transition none
+    h4
+      :opacity 0.3
+      @media screen and (max-width: $break-large)
+        :display none
+    p
+      :transition none
+      :display none
+    
 
