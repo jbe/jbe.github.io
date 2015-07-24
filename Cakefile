@@ -49,9 +49,11 @@ filter = (name) ->
     when "index.html", "build.coffee" then false
     else true
 
-watch.watchTree(
-  "."
-  {ignoreDotFiles: true, filter: filter}
-  build)
+task "build", "build once", build
+task "auto",  "run autobuilder", ->
+  watch.watchTree(
+    "."
+    {ignoreDotFiles: true, filter: filter}
+    build)
 
 
