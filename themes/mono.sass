@@ -1,8 +1,12 @@
 @charset "utf-8"
+
+html, body, iframe
+  margin: 0
+  padding: 0
+
 body
   font: 16px/1.5em 'Roboto Mono', 'Consolas', 'Andale Mono', 'Monaco', 'Courier New', Courier, monospace
-  padding: 1ch
-  margin: 0
+  text-shadow: 0px 0px 25px white
 
 main, footer, body > header
   max-width: 64ch
@@ -49,6 +53,11 @@ article.txt p
   background-color: #ddd
   padding: 2px 4px
   margin-right: 2px
+  text-shadow: none
+
+  a
+    color: white
+    text-shadow: none
 
 a.tag
   text-shadow: none
@@ -77,7 +86,6 @@ p, li, td, th
   code
     background-color: #eee
 
-
 h1, h2, h3, h4, h5, h6
   font-size: 1em
 
@@ -103,7 +111,6 @@ blockquote
 
 img
   max-width: 100%
-
 
 @media screen and (min-width: 1367px)
   body

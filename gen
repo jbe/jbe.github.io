@@ -162,8 +162,9 @@ class Uniblog
 
   def render!
     styles = Tilt.new('themes/mono.sass').render
+    js     = Tilt.new('themes/mono.coffee').render
     html   = Tilt.new('themes/mono.slim').render(@db,
-      stylesheet: styles, settings: @settings)
+      stylesheet: styles, js: js, settings: @settings)
     File.write 'index.html', html
   end
 end

@@ -5,9 +5,11 @@ html
     title= settings.title
     meta author="Jostein Berre Eliassen"
     link href='https://fonts.googleapis.com/css?family=Roboto+Mono:400,700' rel='stylesheet' type='text/css'
-    style== stylesheet
+    style   == stylesheet
+    script  == js
 
   body lang='en'
+    div#ybg style="position: fixed; z-index: -99; width: 100%; height: 100%; top: 0; left: 0"
     header
       p
         a.inverse href='/' = settings.title
@@ -30,7 +32,8 @@ html
                   span.weak= item.date.index_day
                   - for tag in item.tags
                     br
-                    small.tag = tag
+                    small.tag
+                      a href="##{tag}" = tag
                 - if item.title?
                   - if item.mark?(:no_title)
                     p == item.title

@@ -1,3 +1,7 @@
+>>> 2015 12 03
+
+>>> [Scatmode](javascript:ybg('y6oXW_YiV6g')) // [Chemical mode](javascript:ybg('P_eaCE_8ilI')) [modes]
+
 >>> 2015 11 29
 
 >>> <span id="about">This is the homepage of Jostein Berre Eliassen</span>

@@ -1,8 +1,11 @@
 <html><head><meta charset="utf-8" /><title>jbe</title><meta author="Jostein Berre Eliassen" /><link href="https://fonts.googleapis.com/css?family=Roboto+Mono:400,700" rel="stylesheet" type="text/css" /><style>@charset "UTF-8";
+html, body, iframe {
+  margin: 0;
+  padding: 0; }
+
 body {
   font: 16px/1.5em "Roboto Mono", "Consolas", "Andale Mono", "Monaco", "Courier New", Courier, monospace;
-  padding: 1ch;
-  margin: 0; }
+  text-shadow: 0px 0px 25px white; }
 
 main, footer, body > header {
   max-width: 64ch;
@@ -48,7 +51,11 @@ article.txt p {
   color: white;
   background-color: #ddd;
   padding: 2px 4px;
-  margin-right: 2px; }
+  margin-right: 2px;
+  text-shadow: none; }
+  .tag a {
+    color: white;
+    text-shadow: none; }
 
 a.tag {
   text-shadow: none;
@@ -107,9 +114,24 @@ img {
 
   hr {
     border: 4px solid #ECECEC; } }
-</style></head><body lang="en"><header><p><a class="inverse" href="/">jbe</a><span class="extra">Notes &#x266B; &#x266A; &#x2669;</span></p></header><main><a class="tag" href="#index">index</a><a class="tag" href="#about">what?</a><a class="tag" href="http://soundcloud.com/jostein-be">music</a><a class="tag" href="http://github.com/jbe">hub</a><a class="tag" href="http://stackoverflow.com/users/475468/jostein">overflow</a><a class="tag" href="http://jostein-be.tumblr.com/">tumblr</a><a class="tag" href="http://www.urbandictionary.com/define.php?term=Yostone">yostone?</a><a class="tag" href="https://svusj.wufoo.com/forms/send-jostein-a-message/">contact</a><section><article class="md" id="2015-11-29-001"><header class="heading"><span class="beside"><span class="weak">2015-11-29</span></span><h1><p><span id="about">This is the homepage of Jostein Berre Eliassen</span></p>
+</style><script>(function() {
+  window.ybg = function(video) {
+    var frame, wrapper;
+    wrapper = document.getElementById('ybg');
+    wrapper.innerHTML = '';
+    frame = document.createElement('iframe');
+    frame.setAttribute('frameborder', '0');
+    frame.setAttribute('height', '100%');
+    frame.setAttribute('width', '100%');
+    frame.setAttribute('src', 'https://youtube.com/embed/' + video + '?t=0m0s&autoplay=1&controls=0&showinfo=0&autohide=1');
+    return wrapper.appendChild(frame);
+  };
+
+}).call(this);
+</script></head><body lang="en"><div id="ybg" style="position: fixed; z-index: -99; width: 100%; height: 100%; top: 0; left: 0"></div><header><p><a class="inverse" href="/">jbe</a><span class="extra">Notes &#x266B; &#x266A; &#x2669;</span></p></header><main><a class="tag" href="#index">index</a><a class="tag" href="#about">what?</a><a class="tag" href="http://soundcloud.com/jostein-be">music</a><a class="tag" href="http://github.com/jbe">hub</a><a class="tag" href="http://stackoverflow.com/users/475468/jostein">overflow</a><a class="tag" href="http://jostein-be.tumblr.com/">tumblr</a><a class="tag" href="http://www.urbandictionary.com/define.php?term=Yostone">yostone?</a><a class="tag" href="https://svusj.wufoo.com/forms/send-jostein-a-message/">contact</a><section><article class="md" id="2015-12-03-001"><header class="heading"><span class="beside"><span class="weak">2015-12-03</span><br /><small class="tag"><a href="#modes">modes</a></small></span><h1><p><a href="javascript:ybg(&#x27;y6oXW_YiV6g&#x27;)">Scatmode</a> // <a href="javascript:ybg(&#x27;P_eaCE_8ilI&#x27;)">Chemical mode</a></p>
+</h1></header><hr /></article><article class="md" id="2015-11-29-001"><header class="heading"><span class="beside"><span class="weak">2015-11-29</span></span><h1><p><span id="about">This is the homepage of Jostein Berre Eliassen</span></p>
 </h1></header><p>It is also a notepad of random thoughts. The visual style is based on a useful (for geeks) site called <a href="http://weblog.sh">weblog.sh</a>, with a few additions.</p>
-<hr /></article><article class="md" id="2015-11-29-002"><header class="heading"><span class="beside"><span class="weak">2015-11-29</span><br /><small class="tag">programming</small><br /><small class="tag">output</small></span><h1><p>More about the new blog engine..</p>
+<hr /></article><article class="md" id="2015-11-29-002"><header class="heading"><span class="beside"><span class="weak">2015-11-29</span><br /><small class="tag"><a href="#programming">programming</a></small><br /><small class="tag"><a href="#output">output</a></small></span><h1><p>More about the new blog engine..</p>
 </h1></header><p>I made a new &ldquo;blog&rdquo; &ldquo;engine&rdquo; for this notepad. Strangely, i woke up with the desire to create a blogging tool where i could keep all the content in one large file, and keep adding entries at the top. This is the basic file format:</p>
 
 <pre><code>&gt;&gt;&gt; 2015 11 28
@@ -123,7 +145,7 @@ And so on...
 <p>Finding entries is as easy as searching for <code>[tag_name]</code>, <code>{mark_name}</code> or <code>&gt;&gt;&gt; YYYY MM DD</code>. The file can be split up if you absolutely need to, but the idea is to have everything together, and use your editor to navigate.</p>
 
 <p>The engine is work in progress, and does not have its own project yet, but you you will find it in <a href="//github.com/jbe/jbe.github.com">the source code</a> if you&rsquo;re interested.</p>
-<hr /></article><article class="md" id="2015-11-29-003"><header class="heading"><span class="beside"><span class="weak">2015-11-29</span><br /><small class="tag">programming</small><br /><small class="tag">idea</small></span><h1><p>I want a programming language that..</p>
+<hr /></article><article class="md" id="2015-11-29-003"><header class="heading"><span class="beside"><span class="weak">2015-11-29</span><br /><small class="tag"><a href="#programming">programming</a></small><br /><small class="tag"><a href="#idea">idea</a></small></span><h1><p>I want a programming language that..</p>
 </h1></header><ul>
 <li>can be dynamically redefined at runtime, including the syntax</li>
 <li>integrates interpreter, compiler and compiled program</li>
@@ -134,9 +156,9 @@ And so on...
 <li>lets you express what you are thinking</li>
 <li>provides universal names for anonymous constructs</li>
 </ul>
-<hr /></article><article class="md" id="2015-11-27-001"><header class="heading"><span class="beside"><span class="weak">2015-11-27</span><br /><small class="tag">found</small><br /><small class="tag">link</small></span><h1><p><a href="http://ericandre.com">http://ericandre.com</a> (nsfw)</p>
-</h1></header><hr /></article><article class="md" id="2015-11-27-002"><header class="heading"><span class="beside"><span class="weak">2015-11-27</span><br /><small class="tag">found</small><br /><small class="tag">image</small></span><h1><p>An artificial map with geographic features named after movies</p>
+<hr /></article><article class="md" id="2015-11-27-001"><header class="heading"><span class="beside"><span class="weak">2015-11-27</span><br /><small class="tag"><a href="#found">found</a></small><br /><small class="tag"><a href="#link">link</a></small></span><h1><p><a href="http://ericandre.com">http://ericandre.com</a> (nsfw)</p>
+</h1></header><hr /></article><article class="md" id="2015-11-27-002"><header class="heading"><span class="beside"><span class="weak">2015-11-27</span><br /><small class="tag"><a href="#found">found</a></small><br /><small class="tag"><a href="#image">image</a></small></span><h1><p>An artificial map with geographic features named after movies</p>
 </h1></header><p><a href='http://i.dailymail.co.uk/i/pix/2012/11/16/article-2233375-160AECBD000005DC-345_964x650.jpg
 '><img src='http://i.dailymail.co.uk/i/pix/2012/11/16/article-2233375-160AECBD000005DC-345_964x650.jpg
 '></a></p>
-<hr /></article></section><section><p id="index"><a class="inverse" href="/">Index</a><span class="extra">tags</span></p><p><a class="tag" href="#programming">programming</a><a class="tag" href="#output">output</a><a class="tag" href="#idea">idea</a><a class="tag" href="#found">found</a><a class="tag" href="#link">link</a><a class="tag" href="#image">image</a></p><p class="index"><small><span class="tag" id="programming">programming:</span><br /><a href="#2015-11-29-002">More about the new blog engine..</a><br /><a href="#2015-11-29-003">I want a programming language that..</a></small></p><p class="index"><small><span class="tag" id="output">output:</span><br /><a href="#2015-11-29-002">More about the new blog engine..</a></small></p><p class="index"><small><span class="tag" id="idea">idea:</span><br /><a href="#2015-11-29-003">I want a programming language that..</a></small></p><p class="index"><small><span class="tag" id="found">found:</span><br /><a href="#2015-11-27-001">&lt;http://ericandre.com&gt; (nsfw)</a><br /><a href="#2015-11-27-002">An artificial map with geographic features named after movies</a></small></p><p class="index"><small><span class="tag" id="link">link:</span><br /><a href="#2015-11-27-001">&lt;http://ericandre.com&gt; (nsfw)</a></small></p><p class="index"><small><span class="tag" id="image">image:</span><br /><a href="#2015-11-27-002">An artificial map with geographic features named after movies</a></small></p></section></main><footer><a href="//jostein.be">&copy; 2015 //jostein.be</a></footer></body></html>
+<hr /></article></section><section><p id="index"><a class="inverse" href="/">Index</a><span class="extra">tags</span></p><p><a class="tag" href="#modes">modes</a><a class="tag" href="#programming">programming</a><a class="tag" href="#output">output</a><a class="tag" href="#idea">idea</a><a class="tag" href="#found">found</a><a class="tag" href="#link">link</a><a class="tag" href="#image">image</a></p><p class="index"><small><span class="tag" id="modes">modes:</span><br /><a href="#2015-12-03-001">[Scatmode](javascript:ybg(&#39;y6oXW_YiV6g&#39;)) // [Chemical mode](javascript:ybg(&#39;P_eaCE_8ilI&#39;))</a></small></p><p class="index"><small><span class="tag" id="programming">programming:</span><br /><a href="#2015-11-29-002">More about the new blog engine..</a><br /><a href="#2015-11-29-003">I want a programming language that..</a></small></p><p class="index"><small><span class="tag" id="output">output:</span><br /><a href="#2015-11-29-002">More about the new blog engine..</a></small></p><p class="index"><small><span class="tag" id="idea">idea:</span><br /><a href="#2015-11-29-003">I want a programming language that..</a></small></p><p class="index"><small><span class="tag" id="found">found:</span><br /><a href="#2015-11-27-001">&lt;http://ericandre.com&gt; (nsfw)</a><br /><a href="#2015-11-27-002">An artificial map with geographic features named after movies</a></small></p><p class="index"><small><span class="tag" id="link">link:</span><br /><a href="#2015-11-27-001">&lt;http://ericandre.com&gt; (nsfw)</a></small></p><p class="index"><small><span class="tag" id="image">image:</span><br /><a href="#2015-11-27-002">An artificial map with geographic features named after movies</a></small></p></section></main><footer><a href="//jostein.be">&copy; 2015 //jostein.be</a></footer></body></html>
