@@ -4,8 +4,9 @@ html
     meta charset="utf-8"
     title= settings.title
     meta author="Jostein Berre Eliassen"
-    link href='https://fonts.googleapis.com/css?family=Roboto+Mono:400,700' rel='stylesheet' type='text/css'
-    style   == stylesheet
+    // link href='https://fonts.googleapis.com/css?family=Roboto+Mono:400,700' rel='stylesheet' type='text/css'
+    link href='https://fonts.googleapis.com/css?family=Droid+Sans:700|Droid+Sans+Mono|Crimson+Text:400,400italic' rel='stylesheet' type='text/css'
+    style == stylesheet
     script
       | (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
       | (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
@@ -22,14 +23,15 @@ html
         a.inverse href='/' = settings.title
         span.extra Notes &#x266B; &#x266A; &#x2669;
     main
-      a.tag href="#index" index
-      a.tag href="#about" what?
-      a.tag href="http://soundcloud.com/jostein-be" cloud
-      a.tag href="http://github.com/jbe" hub
-      a.tag href="http://stackoverflow.com/users/475468/jostein" flow
-      a.tag href="http://jostein-be.tumblr.com/" tumble
-      a.tag href="http://www.urbandictionary.com/define.php?term=Yostone" yostone
-      a.tag href="https://svusj.wufoo.com/forms/send-jostein-a-message/" contact
+      p.menu
+        a.tag href="#index" index
+        a.tag href="#about" what?
+        a.tag href="http://soundcloud.com/jostein-be" cloud
+        a.tag href="http://github.com/jbe" hub
+        a.tag href="http://stackoverflow.com/users/475468/jostein" flow
+        a.tag href="http://jostein-be.tumblr.com/" tumble
+        a.tag href="http://www.urbandictionary.com/define.php?term=Yostone" yostone
+        a.tag href="https://svusj.wufoo.com/forms/send-jostein-a-message/" contact
       section
         - @by_id.each do |id, item|
           - unless item.mark?(:draft)
