@@ -1,3 +1,15 @@
+>>> 2016 02 05
+
+>>> A nice desktop linux distro [found] [software]
+
+Basically, a neat, good looking Ubuntu, without ******* unity.
+
+[elementary OS](https://elementary.io)
+
+>>> Hello there
+
+@@@ http://dykn.com/storage/2014/12/positively-smitten.jpg
+
 >>> 2015 12 03
 
 >>> [Chemical mode](javascript:ybg('P_eaCE_8ilI')) [modes]
