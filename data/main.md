@@ -1,14 +1,17 @@
 >>> 2016 02 05
 
+>>> Minion, Crimson Text and Droid Sans [fonts] [design]
+
+I've been looking into typesetting and fonts recently. I looked at different books to see which fonts they use, and I absolutely prefer *Minion*. Minion is a commercial font inspired by classical roman serifs, and it is a joy to read.
+
+Thankfully, there is a free alternative that looks very similar. It is called *Crimson Text*, and is available on Google Fonts.
+
+Serifs tend to look good when paired with a boldish sans-serif, and i happen to like *Droid Sans*, which is also free. So there you go, this page is now using those two fonts.
+
+
 >>> A nice desktop linux distro [found] [software]
 
-Basically, a neat, good looking Ubuntu, without ******* unity.
-
-[elementary OS](https://elementary.io)
-
->>> Hello there
-
-@@@ http://dykn.com/storage/2014/12/positively-smitten.jpg
+Basically a neat, good looking Ubuntu, without Unity: *[elementary OS](https://elementary.io).*
 
 >>> 2015 12 03
 
@@ -18,11 +21,11 @@ Basically, a neat, good looking Ubuntu, without ******* unity.
 
 >>> <span id="about">This is the homepage of Jostein Berre Eliassen</span>
 
-It is also a notepad of random thoughts. The visual style is based on a useful (for geeks) site called [weblog.sh](http://weblog.sh), with a few additions.
+It is also a notepad of randomness. The visual style was originally inspired by a geeky site called [weblog.sh](http://weblog.sh).
 
->>> More about the new blog engine.. [programming] [output]
+>>> I made a hacky blog file format [programming] [output]
 
-I made a new "blog" "engine" for this notepad. Strangely, i woke up with the desire to create a blogging tool where i could keep all the content in one large file, and keep adding entries at the top. This is the basic file format:
+I made a new *"blog" "engine"* for this notepad. I woke up with the desire to create a blogging tool where you keep all the content in one large file, and keep adding entries at the top. This is the basic file format:
 
     >>> 2015 11 28
     >>> Entry title [article] [programming] {draft}
@@ -33,7 +36,7 @@ I made a new "blog" "engine" for this notepad. Strangely, i woke up with the des
 
 Finding entries is as easy as searching for `[tag_name]`, `{mark_name}` or `>>> YYYY MM DD`. The file can be split up if you absolutely need to, but the idea is to have everything together, and use your editor to navigate.
 
-The engine is work in progress, and does not have its own project yet, but you you will find it in [the source code](//github.com/jbe/jbe.github.com) if you're interested.
+The engine is work in progres. .You you will find it in [the source code](//github.com/jbe/jbe.github.com) for this page if you're interested.
 
 >>> I want a programming language that..  [programming] [idea]
 
@@ -47,8 +50,6 @@ The engine is work in progress, and does not have its own project yet, but you y
 - provides universal names for anonymous constructs
 
 >>> 2015 11 27
-
->>> <http://ericandre.com> (nsfw) [found] [link]
 
 >>> An artificial map with geographic features named after movies [found] [image]
 
