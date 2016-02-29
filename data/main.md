@@ -1,3 +1,20 @@
+>>> 2016 02 29
+>>> State, actions, view [webdev] [programming] [trends]
+
+[Redux](http://redux.js.org/) (JavaScript), [Elm](http://elm-lang.org/) and [Reagent](http://reagent-project.github.io/)/[Reframe](https://github.com/Day8/re-frame) (Clojure) are different incarnations of the same basic idea -- they resist complexity by requiring you to be explicit about three things:
+
+- Initial program state
+- Actions that produce new state
+- The view as a function of state
+
+(The view needs to emit actions as well if it is interactive)
+
+There are other benefits to this besides being easy to reason about. For instance, if someone discovers a bug in your application, they can send you a copy of their state.
+
+It is also possible to make implementations that record and rewind state changes for you, like [Elm's "time travelling" debugger](http://debug.elm-lang.org/). You can even collapse state down from the time dimension into a single moment, as seen in the mario example of [this great tech talk](https://youtu.be/PUv66718DII?t=12m25s).
+
+This stuff is gaining a lot of traction, together with the release of ECMAScript 6! I wonder if this architecture would make it any easier to find universal names, to get out of [the mess we're in](https://www.youtube.com/watch?v=lKXe3HUG2l4)?
+
 >>> 2016 02 05
 
 >>> Minion, Crimson Text and Droid Sans [fonts] [design]
