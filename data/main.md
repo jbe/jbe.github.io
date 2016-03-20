@@ -1,8 +1,7 @@
 
 >>> 2016 03 20
->>> Obsessed witth walking [found] [video]
+>>> <iframe width="560" height="315" src="https://www.youtube.com/embed/AGWF-VzIqPI" frameborder="0" allowfullscreen></iframe> [found] [video]
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/AGWF-VzIqPI" frameborder="0" allowfullscreen></iframe>
 
 >>> 2016 02 29
 >>> State, actions, view [webdev] [programming] [trends]
