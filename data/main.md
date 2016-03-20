@@ -6,6 +6,8 @@
 
 >>> [TempleOS](http://www.templeos.org/) [found] [software]
 
+Only one screen resolution and no networking, but it will let you communicate with God.
+
 >>> <iframe width="560" height="315" src="https://www.youtube.com/embed/AGWF-VzIqPI" frameborder="0" allowfullscreen></iframe> [found] [video]
 
 
