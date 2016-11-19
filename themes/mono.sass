@@ -6,7 +6,6 @@ html, body, iframe
 
 body
   font: 16px/1.5em 'Crimson Text', serif
-  //text-shadow: 0px 0px 25px white
 
 main, footer, body > header
   max-width: 64ch
@@ -23,9 +22,11 @@ body > header p, .menu
   margin: 1em 0 0 0
 
 header a.inverse
-  font-family: 'Droid Sans', sans-serif
+  font-family: 'Source Sans Pro', sans-serif
+  a
+    text-decoration: none
 h1
-  font-family: 'Droid Sans', sans-serif
+  font-family: 'Source Sans Pro', sans-serif
   margin: 0
   padding: 0
 
@@ -34,14 +35,10 @@ h1
   float: right
 
 a
-  text-decoration: none
   color: black
-  text-shadow: 1px 1px 1px #ffa
-  &:hover
-    text-shadow: 1px 1px 1px #f88
 
 .heading
-  font-family: 'Droid Sans', sans-serif
+  font-family: 'Source Sans Pro', sans-serif
   margin: 0 0 1ch
   padding: 0
 
@@ -52,28 +49,9 @@ article.txt p
   white-space: pre-wrap
 
 .inverse
-  text-shadow: none
   background-color: #333
   color: #EEE
   padding: 1ch
-
-.tag
-  color: white
-  background-color: #ddd
-  padding: 2px 4px
-  margin-right: 2px
-  text-shadow: none
-
-  a
-    color: white
-    text-shadow: none
-
-a.tag
-  text-shadow: none
-  color: black
-
-.weak
-  color: #999
 
 .small
   font-size: 0.8em
@@ -104,7 +82,7 @@ pre
   background-color: #333
   color: #aaa
   overflow-x: auto
-  font-family: 'Droid Sans Mono', sans-serif
+  font-family: monospace
 
 blockquote
   font-style: italic
