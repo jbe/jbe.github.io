@@ -1,3 +1,6 @@
+>>> 2016 11 03
+>>> <div style='position:relative;padding-bottom:57%'><iframe src='https://gfycat.com/ifr/CreamyLinearCommabutterfly' frameborder='0' scrolling='no' width='100%' height='100%' style='position:absolute;top:0;left:0;' allowfullscreen></iframe></div> [video]
+
 >>> 2016 05 07
 >>> The weatherman [found] [video]
 
@@ -8,21 +11,6 @@
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/NKNrL3sRV4o" frameborder="0" allowfullscreen></iframe>
 
->>> [TempleOS](http://www.templeos.org/) [found] [software]
-
-Only one screen resolution and no networking, but it will let you communicate with God.
-
->>> <iframe width="560" height="315" src="https://www.youtube.com/embed/AGWF-VzIqPI" frameborder="0" allowfullscreen></iframe> [found] [video]
-
-
->>> 2016 02 29
->>> State, actions, view [webdev] [programming] [trends]
-
-[Redux](http://redux.js.org/) (JavaScript), [Elm](http://elm-lang.org/) and [Reagent](http://reagent-project.github.io/)/[Reframe](https://github.com/Day8/re-frame) (Clojure) are different incarnations of the same basic idea -- they resist complexity by enforcing separation between:
-
-- Initial program state
-- Actions that produce new state
-- The view (itself a function of state)
 
 >>> 2016 02 05
 
@@ -32,16 +20,13 @@ I've been looking into typesetting and fonts recently. I looked at different boo
 
 Thankfully, there is a free alternative that looks very similar. It is called *Crimson Text*, and is available on Google Fonts.
 
-Serifs tend to look good when paired with a boldish sans-serif, and i happen to like *Droid Sans*, which is also free. So there you go, this page is now using those two fonts.
+Serifs tend to look good when paired with a bold sans-serif, and i happen to like *Source Sans*, which is also free. So there you go, this page is now using those two fonts.
 
 
 >>> A nice desktop linux distro [found] [software]
 
 Basically a neat, good looking Ubuntu, without Unity: *[elementary OS](https://elementary.io).*
 
->>> 2015 12 03
-
->>> [Chemical mode](javascript:ybg('P_eaCE_8ilI')) [modes]
 
 >>> 2015 11 29
 

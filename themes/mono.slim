@@ -5,7 +5,7 @@ html
     title= settings.title
     meta author="Jostein Berre Eliassen"
     // link href='https://fonts.googleapis.com/css?family=Roboto+Mono:400,700' rel='stylesheet' type='text/css'
-    link href='https://fonts.googleapis.com/css?family=Source+Sans+Pro|Crimson+Text:400,400i' rel='stylesheet' type='text/css'
+    link href='https://fonts.googleapis.com/css?family=Source+Sans+Pro:700|Crimson+Text:400,400i' rel='stylesheet' type='text/css'
     style == stylesheet
     script
       | (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
@@ -19,37 +19,41 @@ html
   body lang='en'
     div#ybg style="position: fixed; z-index: -99; width: 100%; height: 100%; top: 0; left: 0"
     header
-      p
+      h1
         a.inverse href='/' = settings.title
-        span.extra Notes &#x266B; &#x266A; &#x2669;
-    main
+        span< Notes &#x266B; &#x266A; &#x2669;
       p.menu
-        a.tag href="#index" index
-        a.tag href="#about" what?
-        a.tag href="http://soundcloud.com/jostein-be" cloud
-        a.tag href="http://github.com/jbe" hub
-        a.tag href="http://stackoverflow.com/users/475468/jostein" flow
-        a.tag href="http://jostein-be.tumblr.com/" tumble
-        a.tag href="http://www.urbandictionary.com/define.php?term=Yostone" yostone
-        a.tag href="https://svusj.wufoo.com/forms/send-jostein-a-message/" contact
+        a< href="#index" index
+        span< &middot;
+        a< href="#about" what?
+        span< &middot;
+        a< href="http://soundcloud.com/jostein-be" cloud
+        span< &middot;
+        a< href="http://github.com/jbe" hub
+        span< &middot;
+        a< href="http://stackoverflow.com/users/475468/jostein" flow
+        span< &middot;
+        a< href="http://jostein-be.tumblr.com/" tumble
+        span< &middot;
+        a< href="http://www.urbandictionary.com/define.php?term=Yostone" yostone
+        span< &middot;
+        a< href="https://svusj.wufoo.com/forms/send-jostein-a-message/" contact
+
+    main
       section
         - @by_id.each do |id, item|
           - unless item.mark?(:draft)
-            article.md id=item.id
-              header.heading
-                span.beside
-                  span.weak= item.date.index_day
-                  - for tag in item.tags
-                    br
-                    small.tag
-                      a href="##{tag}" = tag
-                - if item.title?
-                  - if item.mark?(:no_title)
-                    p == item.title
-                  - else
-                    h1 == item.title
+            article id=item.id
+              - if item.title?
+                - if item.mark?(:no_title)
+                  p == item.title
+                - else
+                  h1 == item.title
+              p.postmeta
+                span = item.date.index_day
+                - for tag in item.tags
+                    a< href="##{tag}" = tag
               == item.html
-              hr
       section
         p#index
           a.inverse href='/' Index

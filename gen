@@ -65,7 +65,7 @@ class Uniblog
         @md_cache << args.join(' ')
       else
         @title_md = args.join(' ')       if args.any?
-        @title    = MD.render(@title_md) if args.any?
+        @title    = title_md #MD.render(@title_md) if args.any?
       end
     end
 
