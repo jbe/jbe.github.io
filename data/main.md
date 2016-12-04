@@ -14,7 +14,7 @@
 
 >>> 2016 02 05
 
->>> Minion, Crimson Text and Droid Sans [fonts] [design]
+>>> Minion, Crimson Text and Source Sans [fonts] [design]
 
 I've been looking into typesetting and fonts recently. I looked at different books to see which fonts they use, and I absolutely prefer *Minion*. Minion is a commercial font inspired by classical roman serifs, and it is a joy to read.
 
